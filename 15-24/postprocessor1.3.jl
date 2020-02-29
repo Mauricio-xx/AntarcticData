@@ -573,7 +573,7 @@ end	#end function
 
 function FilterAndPlot()
 
-
+	temp_max = 50;
 	if NodeID != 10 # NodeID = 1O case!
 		
 
@@ -582,12 +582,12 @@ function FilterAndPlot()
 	
 	#df =dropmissing(df);
 	
-	mean_tempPlant1 = mean(df.PlantTemp1);
+	#= mean_tempPlant1 = mean(df.PlantTemp1);
 	mean_tempPlant2 = mean(df.PlantTemp2);
 	mean_tempPlant3 = mean(df.PlantTemp3);
 	mean_tempPlant4 = mean(df.PlantTemp4);				#Calculate mean for all plants
 	mean_tempPlant5 = mean(df.PlantTemp5);
-	mean_tempPlant6 = mean(df.PlantTemp6);
+	=# mean_tempPlant6 = mean(df.PlantTemp6);
 	
 	#df = CSV.read("$NodeID dfb.csv"; copycols=true);
 	size_df = size(df);
@@ -609,8 +609,7 @@ function FilterAndPlot()
             		value = df.PlantTemp1[x];
             
 		
-			if ismissing(value) == false && value > 5*mean_tempPlant1
-			
+			if ismissing(value) == false && value > temp_max 	
 				df.PlantTemp1[x] = missing;
 			end
 
@@ -633,7 +632,7 @@ function FilterAndPlot()
             		value = df.PlantTemp2[x];
             
 		
-			if ismissing(value) == false && value > 5*mean_tempPlant2
+			if ismissing(value) == false && value > temp_max
 			
 				df.PlantTemp2[x] = missing ;
 			end
@@ -656,7 +655,7 @@ function FilterAndPlot()
             		value = df.PlantTemp3[x];
             
 		
-			if ismissing(value) == false && value > 5*mean_tempPlant3
+			if ismissing(value) == false && value > temp_max
 			
 				df.PlantTemp3[x] = missing ;
 			end
@@ -680,7 +679,7 @@ function FilterAndPlot()
             		value = df.PlantTemp4[x];
             
 		
-			if ismissing(value) == false && value > 5*mean_tempPlant4
+			if ismissing(value) == false && value > temp_max
 			
 				df.PlantTemp4[x] = missing ;
 			end
@@ -705,7 +704,7 @@ function FilterAndPlot()
             		value = df.PlantTemp5[x];
             
 		
-			if ismissing(value) == false && value > 5*mean_tempPlant5
+			if ismissing(value) == false && value > temp_max
 			
 				df.PlantTemp5[x] = missing ;
 			end
@@ -730,7 +729,7 @@ function FilterAndPlot()
             		value = df.PlantTemp6[x];
             
 		
-			if ismissing(value) == false && value > 5*mean_tempPlant6
+			if ismissing(value) == false && value > temp_max
 			
 				df.PlantTemp6[x] = missing ;
 			end
@@ -992,9 +991,38 @@ function Analyze( node = Int[], group = String[], plant = String[])
 							ambient_column = DataFrame(u = file[:,:14]);
 			global D_data_heating = insert!(D_data_heating, j+1, ambient_column.u, Symbol.("Ambient_1_$sensor_number"));
 							CSV.write("$node Only_D.csv", D_data_heating );
-							println("now you have new dataframe call 'D_data_heating' enjoy! ");
+
 						println("also you have new csv file call $node Only_D.csv in $heating_data_dir");
-						end
+
+node = parse(Int,node);
+
+if node == 11 
+	global D_data_heating_11 = D_data_heating; 
+	println("now you have new dataframe call 'D_data_heating_11' enjoy! "); 
+end
+
+if node == 12 
+	global D_data_heating_12 = D_data_heating; 
+	println("now you have new dataframe call 'D_data_heating_12' enjoy! "); 
+end
+
+if node == 13 
+	global D_data_heating_13 = D_data_heating; 
+	println("now you have new dataframe call 'D_data_heating_13' enjoy! "); 
+end
+
+if node == 14 
+	global D_data_heating_14 = D_data_heating; 
+	println("now you have new dataframe call 'D_data_heating_14' enjoy! "); 
+end
+
+if node == 15 
+	global D_data_heating_15 = D_data_heating; 
+	println("now you have new dataframe call 'D_data_heating_15' enjoy! "); 
+end
+
+							
+						end # end j ==3
 					end
 						
 				#end #if plant == "D"
@@ -1017,9 +1045,38 @@ function Analyze( node = Int[], group = String[], plant = String[])
 						ambient_column = DataFrame(u = file[:,:14]);
 			global C_data_heating = insert!(C_data_heating, j+1, ambient_column.u, Symbol.("Ambient_1_$sensor_number"));
 							CSV.write("$node Only_C.csv",C_data_heating);
-							println("now yo have new dataframe call 'C_data_heating' enjoy! ");
+
 						println("also you have new csv file call $node Only_C.csv in $heating_data_dir");
-						end									
+
+node = parse(Int,node);
+
+if node == 11 
+	global C_data_heating_11 = C_data_heating; 
+	println("now you have new dataframe call 'C_data_heating_11' enjoy! "); 
+end
+
+if node == 12 
+	global C_data_heating_12 = C_data_heating; 
+	println("now you have new dataframe call 'C_data_heating_12' enjoy! "); 
+end
+
+if node == 13 
+	global C_data_heating_13 = C_data_heating; 
+	println("now you have new dataframe call 'C_data_heating_13' enjoy! "); 
+end
+
+if node == 14 
+	global C_data_heating_14 = C_data_heating; 
+	println("now you have new dataframe call 'C_data_heating_14' enjoy! "); 
+end
+
+if node == 15 
+	global C_data_heating_15 = C_data_heating; 
+	println("now you have new dataframe call 'C_data_heating_15' enjoy! "); 
+end
+
+
+						end  #end j ==3 									
 
 					end
 				#end
@@ -1067,7 +1124,41 @@ cd(initial_dir);
 							CSV.write("$node Only_D.csv", D_data_otc);
 							println("now yo have new dataframe call 'D_data_otc' enjoy! ");
 						println("also you have new csv file call $node Only_D.csv in $otc_data_dir");
-						end							
+
+
+node = parse(Int,node);
+
+if node == 16 
+	global D_data_otc_16 = D_data_otc; 
+	println("now you have new dataframe call 'D_data_otc_16' enjoy! "); 
+end
+
+if node == 17 
+	global D_data_otc_17 = D_data_otc; 
+	println("now you have new dataframe call 'D_data_otc_17' enjoy! ");  
+end
+
+if node == 18 
+	global D_data_otc_18 = D_data_otc; 
+	println("now you have new dataframe call 'D_data_otc_18' enjoy! "); 
+end
+
+if node == 19 
+	global D_data_otc_19 = D_data_otc; 
+	println("now you have new dataframe call 'D_data_otc_19' enjoy! "); 
+end
+
+if node == 20 
+	global D_data_otc_20 = D_data_otc; 
+	println("now you have new dataframe call 'D_data_otc_20' enjoy! "); 
+end
+
+						
+
+				end # j==3							 
+
+
+							
 
 					end
 						
@@ -1091,9 +1182,40 @@ cd(initial_dir);
 							ambient_column = DataFrame(u = file[:,:14]);
 				global C_data_otc = insert!(C_data_otc, j+1, ambient_column.u, Symbol.("Ambient_1_$sensor_number"));
 							CSV.write("$node Only_C.csv", C_data_otc);
-							println("now yo have new dataframe call 'C_data_otc' enjoy! ");
+
 						println("also you have new csv file call $node Only_C.csv in $otc_data_dir");
-						end
+
+
+
+node = parse(Int,node);
+
+if node == 16 
+	global C_data_otc_16 = C_data_otc; 
+	println("now you have new dataframe call 'D_data_otc_16' enjoy! "); 
+end
+
+if node == 17 
+	global C_data_otc_17 = C_data_otc; 
+	println("now you have new dataframe call 'C_data_otc_17' enjoy! ");  
+end
+
+if node == 18 
+	global C_data_otc_18 = C_data_otc; 
+	println("now you have new dataframe call 'C_data_otc_18' enjoy! "); 
+end
+
+if node == 19 
+	global C_data_otc_19 = C_data_otc; 
+	println("now you have new dataframe call 'C_data_otc_19' enjoy! "); 
+end
+
+if node == 20 
+	global C_data_otc_20 = C_data_otc; 
+	println("now you have new dataframe call 'C_data_otc_20' enjoy! "); 
+end
+
+
+						end #end j == 3
 						
 					end
 				 
@@ -1137,15 +1259,45 @@ cd(initial_dir);
 			    #CREATE D_data. This dataframa have only data of D.. plants				
 				global D_data_openspace = insert!(D_data_openspace, j, column.w, Symbol.("TempPlant$sensor_number"));
 
+
+
 						if j == 3
 							ambient_column = DataFrame(u = file[:,:14]);
 			global D_data_openspace = insert!(D_data_openspace, j+1, ambient_column.u, Symbol.("Ambient_1_$sensor_number"));
 
 							CSV.write("$node Only_D.csv", D_data_openspace);
-							println("now yo have new dataframe call 'D_data_openspace' enjoy! ");
 						println("also you have new csv file call $node Only_D.csv in $openspace_data_dir");
+
+
+node = parse(Int,node);
+
+if node == 21 
+	global D_data_openspace_21 = D_data_openspace; 
+	println("now you have new dataframe call 'D_data_otc_21' enjoy! "); 
+end
+
+if node == 21 
+	global D_data_openspace_22 = D_data_openspace; 
+	println("now you have new dataframe call 'D_data_otc_22' enjoy! ");  
+end
+
+if node == 23 
+	global D_data_openspace_23 = D_data_openspace; 
+	println("now you have new dataframe call 'D_data_otc_23' enjoy! "); 
+end
+
+if node == 24 
+	global D_data_openspace_24 = D_data_openspace; 
+	println("now you have new dataframe call 'D_data_otc_24' enjoy! "); 
+end
+
+if node == 25 
+	global D_data_openspace_25 = D_data_openspace; 
+	println("now you have new dataframe call 'D_data_otc_25' enjoy! "); 
+end
+
 								
-						end
+						end #end if j == 3
 							
 
 					end
@@ -1171,9 +1323,37 @@ cd(initial_dir);
 
 			global C_data_openspace = insert!(C_data_openspace, j+1, ambient_column.u, Symbol.("Ambient_1_$sensor_number"));
 							CSV.write("$node Only_C.csv", C_data_openspace);
-							println("now yo have new dataframe call 'C_data_openspace' enjoy! ");
+
 						println("also you have new csv file call $node Only_C.csv in $openspace_data_dir");
-						end
+					
+
+
+						end #end j == 3
+
+if node == 21 
+	global C_data_openspace_21 = C_data_openspace; 
+	println("now you have new dataframe call 'C_data_otc_21' enjoy! "); 
+end
+
+if node == 21 
+	global C_data_openspace_22 = C_data_openspace; 
+	println("now you have new dataframe call 'C_data_otc_22' enjoy! ");  
+end
+
+if node == 23 
+	global C_data_openspace_23 = C_data_openspace; 
+	println("now you have new dataframe call 'C_data_otc_23' enjoy! "); 
+end
+
+if node == 24 
+	global C_data_openspace_24 = C_data_openspace; 
+	println("now you have new dataframe call 'C_data_otc_24' enjoy! "); 
+end
+
+if node == 25 
+	global C_data_openspace_25 = C_data_openspace; 
+	println("now you have new dataframe call 'C_data_otc_25' enjoy! "); 
+end
 								
 						
 
