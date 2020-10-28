@@ -1,0 +1,196 @@
+julia> describe(df_heating11)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median  │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union…  │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼─────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │         │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant2   │ 7.7324  │ -2.3                │ 7.23    │ 30.65               │         │ 14381    │ Union{Missing, Float64} │
+│ 3   │ TempPlant3   │ 7.9588  │ -3.3                │ 7.11    │ 36.15               │         │ 14389    │ Union{Missing, Float64} │
+│ 4   │ TempPlant4   │ 7.70676 │ -2.46               │ 6.91    │ 37.63               │         │ 14396    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 7.25278 │ 0.0                 │ 5.62    │ 29.71               │         │ 66248    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 10.1879 │ -769.285            │ -2.0462 │ 4799.97             │         │ 14220    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.56607 │ -0.187              │ 5.5     │ 24.062              │         │ 14220    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.383   │ -2.562              │ 3.25    │ 15.187              │         │ 14220    │ Union{Missing, Float64} │
+
+julia> describe(df_heating12)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median  │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union…  │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼─────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │         │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant2   │ 7.95719 │ -2.14               │ 7.37    │ 30.97               │         │ 16447    │ Union{Missing, Float64} │
+│ 3   │ TempPlant3   │ 8.06221 │ -2.26               │ 7.23    │ 30.45               │         │ 16447    │ Union{Missing, Float64} │
+│ 4   │ TempPlant4   │ 8.28354 │ -2.18               │ 7.45    │ 39.57               │         │ 16447    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 6.69362 │ -2.59               │ 5.21    │ 33.95               │         │ 16447    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 63.5402 │ -2.0462             │ 71.1793 │ 105.707             │         │ 16447    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.67445 │ -0.187              │ 5.625   │ 23.812              │         │ 16447    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.46313 │ -2.562              │ 3.312   │ 15.187              │         │ 16447    │ Union{Missing, Float64} │
+
+julia> describe(df_heating13)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median  │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union…  │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼─────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │         │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant3   │ 8.32776 │ -2.34               │ 7.37    │ 29.93               │         │ 16229    │ Union{Missing, Float64} │
+│ 3   │ TempPlant5   │ 8.29648 │ -2.5                │ 7.61    │ 34.01               │         │ 16229    │ Union{Missing, Float64} │
+│ 4   │ TempPlant6   │ 8.13318 │ -4.84               │ 7.45    │ 37.11               │         │ 16229    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 6.30129 │ -2.19               │ 5.04    │ 29.53               │         │ 16229    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 84.7398 │ -2.0462             │ 90.7734 │ 106.578             │         │ 16229    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.65182 │ -0.187              │ 5.562   │ 22.937              │         │ 16229    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.45433 │ -2.562              │ 3.312   │ 15.187              │         │ 16229    │ Union{Missing, Float64} │
+
+julia> describe(df_heating14)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median  │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union…  │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼─────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │         │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant1   │ 7.60489 │ -2.42               │ 6.93    │ 30.39               │         │ 17371    │ Union{Missing, Float64} │
+│ 3   │ TempPlant2   │ 8.62727 │ -2.06               │ 7.73    │ 31.29               │         │ 17371    │ Union{Missing, Float64} │
+│ 4   │ TempPlant4   │ 8.73426 │ -3.46               │ 7.73    │ 34.89               │         │ 17371    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 6.7701  │ -2.48               │ 5.68    │ 30.58               │         │ 17371    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 83.9365 │ -2.0462             │ 87.7882 │ 106.578             │         │ 17371    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.65827 │ -0.187              │ 5.625   │ 22.937              │         │ 17371    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.49304 │ -2.562              │ 3.375   │ 15.187              │         │ 17371    │ Union{Missing, Float64} │
+
+julia> describe(df_heating15)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median  │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union…  │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼─────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │         │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant1   │ 2.05784 │ -1.5                │ 0.0     │ 26.83               │         │ 27483    │ Union{Missing, Float64} │
+│ 3   │ TempPlant2   │ 2.51178 │ 0.0                 │ 0.0     │ 24.29               │         │ 27449    │ Union{Missing, Float64} │
+│ 4   │ TempPlant4   │ 1.99956 │ -3.26               │ 0.0     │ 22.01               │         │ 27505    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 1.66769 │ -2.58               │ 0.0     │ 30.84               │         │ 19122    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 20.7049 │ -2.0462             │ -2.0462 │ 107.751             │         │ 19122    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.77589 │ -0.187              │ 5.687   │ 22.437              │         │ 19122    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.58568 │ -2.25               │ 3.437   │ 15.187              │         │ 19122    │ Union{Missing, Float64} │
+
+julia> describe(df_otc16)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median  │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union…  │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼─────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │         │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant3   │ 4.86013 │ -3.06               │ 4.01    │ 26.29               │         │ 15194    │ Union{Missing, Float64} │
+│ 3   │ TempPlant4   │ 5.04242 │ -3.66               │ 3.97    │ 28.95               │         │ 15193    │ Union{Missing, Float64} │
+│ 4   │ TempPlant5   │ 5.51316 │ -3.58               │ 4.57    │ 29.71               │         │ 15196    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 6.35169 │ -3.06               │ 5.39    │ 22.65               │         │ 40923    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 42.2196 │ -2.0462             │ 27.7921 │ 107.852             │         │ 15193    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.55746 │ -0.187              │ 5.5     │ 23.812              │         │ 15193    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.38099 │ -2.562              │ 3.25    │ 15.187              │         │ 15193    │ Union{Missing, Float64} │
+
+julia> describe(df_otc17)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union… │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │        │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant1   │ 6.28349 │ -2.34               │ 4.71   │ 32.55               │         │ 14892    │ Union{Missing, Float64} │
+│ 3   │ TempPlant3   │ 5.80701 │ -3.14               │ 4.71   │ 33.61               │         │ 14893    │ Union{Missing, Float64} │
+│ 4   │ TempPlant5   │ 6.60744 │ -2.3                │ 4.97   │ 37.21               │         │ 14895    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 6.05326 │ -3.03               │ 4.78   │ 30.09               │         │ 14892    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 89.1665 │ -2.0462             │ 96.096 │ 109.169             │         │ 14892    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.55847 │ -0.187              │ 5.5    │ 23.812              │         │ 14892    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.3744  │ -2.562              │ 3.25   │ 15.187              │         │ 14892    │ Union{Missing, Float64} │
+
+julia> describe(df_otc18)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median  │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union…  │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼─────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │         │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant3   │ 3.33658 │ -3.02               │ 0.0     │ 25.23               │         │ 22315    │ Union{Missing, Float64} │
+│ 3   │ TempPlant4   │ 3.13339 │ -2.06               │ 0.0     │ 26.71               │         │ 22425    │ Union{Missing, Float64} │
+│ 4   │ TempPlant5   │ 3.4959  │ -3.22               │ 0.0     │ 30.63               │         │ 22491    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 3.40104 │ -2.63               │ 0.0     │ 26.92               │         │ 20548    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 45.1349 │ -2.0462             │ 39.4661 │ 121.485             │         │ 20548    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.70612 │ -0.187              │ 5.625   │ 22.437              │         │ 20548    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.51194 │ -2.25               │ 3.375   │ 15.187              │         │ 20548    │ Union{Missing, Float64} │
+
+julia> describe(df_otc19)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median  │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union…  │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼─────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │         │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant3   │ 5.86113 │ -3.06               │ 4.37    │ 35.67               │         │ 15540    │ Union{Missing, Float64} │
+│ 3   │ TempPlant5   │ 6.47498 │ -2.42               │ 4.81    │ 35.01               │         │ 15540    │ Union{Missing, Float64} │
+│ 4   │ TempPlant6   │ 6.06753 │ -2.54               │ 4.59    │ 32.53               │         │ 15540    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 5.75578 │ -3.51               │ 4.37    │ 34.32               │         │ 15540    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 54.6973 │ -2.0462             │ 57.7279 │ 94.2633             │         │ 15540    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.55568 │ -0.187              │ 5.562   │ 22.937              │         │ 15540    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.39539 │ -2.562              │ 3.25    │ 15.187              │         │ 15540    │ Union{Missing, Float64} │
+
+julia> describe(df_otc20)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median  │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union…  │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼─────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │         │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant2   │ 5.56966 │ -2.38               │ 4.37    │ 28.13               │         │ 26539    │ Union{Missing, Float64} │
+│ 3   │ TempPlant5   │ 6.08924 │ -3.14               │ 4.67    │ 30.59               │         │ 26540    │ Union{Missing, Float64} │
+│ 4   │ TempPlant6   │ 5.62518 │ -2.54               │ 4.23    │ 30.15               │         │ 26540    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 6.03229 │ -3.07               │ 4.78    │ 30.35               │         │ 17759    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 89.4805 │ -2.0462             │ 95.9886 │ 110.025             │         │ 17759    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.7012  │ -0.187              │ 5.625   │ 25.687              │         │ 17759    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.51953 │ -2.562              │ 3.375   │ 15.187              │         │ 17759    │ Union{Missing, Float64} │
+
+julia> describe(df_open21)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union… │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │        │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant1   │ 6.20456 │ -2.9                │ 4.41   │ 34.33               │         │ 17985    │ Union{Missing, Float64} │
+│ 3   │ TempPlant5   │ 6.47324 │ -2.86               │ 4.59   │ 38.87               │         │ 17985    │ Union{Missing, Float64} │
+│ 4   │ TempPlant6   │ 6.18882 │ -4.16               │ 4.23   │ 40.81               │         │ 17985    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 5.8434  │ -17.94              │ 4.53   │ 28.95               │         │ 18514    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 84.7544 │ -2.0462             │ 90.251 │ 4799.85             │         │ 17985    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.70836 │ -0.187              │ 5.625  │ 22.937              │         │ 17985    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.52908 │ -2.562              │ 3.375  │ 15.187              │         │ 17985    │ Union{Missing, Float64} │
+
+julia> describe(df_open22)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median  │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union…  │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼─────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │         │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant2   │ 5.26734 │ -3.5                │ 4.33    │ 28.71               │         │ 16339    │ Union{Missing, Float64} │
+│ 3   │ TempPlant3   │ 4.91463 │ -2.82               │ 3.99    │ 27.11               │         │ 16339    │ Union{Missing, Float64} │
+│ 4   │ TempPlant5   │ 5.18244 │ -3.06               │ 4.33    │ 26.23               │         │ 16339    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 4.83166 │ -2.63               │ 4.32    │ 22.82               │         │ 16339    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 72.4922 │ -2.0462             │ 83.5238 │ 107.191             │         │ 16339    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.54835 │ -0.25               │ 5.5     │ 24.062              │         │ 16339    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.35209 │ -2.562              │ 3.25    │ 15.187              │         │ 16339    │ Union{Missing, Float64} │
+
+julia> describe(df_open23)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median  │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union…  │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼─────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │         │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant1   │ 6.1563  │ -1.46               │ 5.01    │ 28.71               │         │ 16997    │ Union{Missing, Float64} │
+│ 3   │ TempPlant2   │ 6.39176 │ -1.78               │ 5.11    │ 43.95               │         │ 17001    │ Union{Missing, Float64} │
+│ 4   │ TempPlant6   │ 5.47338 │ -3.3                │ 4.23    │ 45.03               │         │ 17010    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 5.79749 │ -2.57               │ 4.64    │ 27.51               │         │ 16997    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 88.204  │ -2.0462             │ 94.0467 │ 108.664             │         │ 16997    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.74998 │ -0.187              │ 5.625   │ 22.937              │         │ 16997    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.54934 │ -2.562              │ 3.437   │ 15.187              │         │ 16997    │ Union{Missing, Float64} │
+
+julia> describe(df_open25)
+8×8 DataFrame
+│ Row │ variable     │ mean    │ min                 │ median  │ max                 │ nunique │ nmissing │ eltype                  │
+│     │ Symbol       │ Union…  │ Any                 │ Union…  │ Any                 │ Union…  │ Union…   │ Type                    │
+├─────┼──────────────┼─────────┼─────────────────────┼─────────┼─────────────────────┼─────────┼──────────┼─────────────────────────┤
+│ 1   │ time         │         │ 2020-01-21T00:00:00 │         │ 2020-03-09T23:59:00 │ 70560   │          │ DateTime                │
+│ 2   │ TempPlant1   │ 4.53483 │ -3.94               │ 3.37    │ 31.15               │         │ 16973    │ Union{Missing, Float64} │
+│ 3   │ TempPlant4   │ 4.31828 │ -3.46               │ 3.33    │ 26.29               │         │ 17804    │ Union{Missing, Float64} │
+│ 4   │ TempPlant6   │ 4.34455 │ -4.72               │ 2.89    │ 28.75               │         │ 18174    │ Union{Missing, Float64} │
+│ 5   │ Air_temp_loc │ 4.77809 │ -0.85               │ 4.12    │ 28.85               │         │ 47141    │ Union{Missing, Float64} │
+│ 6   │ Humedity     │ 27.788  │ -2.0462             │ -2.0462 │ 107.318             │         │ 16959    │ Union{Missing, Float64} │
+│ 7   │ air_temp     │ 6.47412 │ -0.25               │ 5.437   │ 22.937              │         │ 16959    │ Union{Missing, Float64} │
+│ 8   │ Ambient_1    │ 3.3315  │ -2.562              │ 3.187   │ 15.187              │         │ 16959    │ Union{Missing, Float64} │
+

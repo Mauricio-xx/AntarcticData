@@ -1,0 +1,119 @@
+attach(mtcars)
+## Read all DataSets
+
+### HEATING GROUP ###
+
+Only_C_11 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/11 Only_C.csv")
+Only_C_12 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/12 Only_C.csv")
+Only_C_13 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/13 Only_C.csv")
+Only_C_14 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/14 Only_C.csv")
+Only_C_15 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/15 Only_C.csv")
+
+Only_D_11 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/11 Only_D.csv")
+Only_D_12 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/12 Only_D.csv")
+Only_D_13 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/13 Only_D.csv")
+Only_D_14 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/14 Only_D.csv")
+Only_D_15 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/15 Only_D.csv")
+
+
+### OTC Group ###
+
+Only_C_16 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/16 Only_C.csv")
+Only_C_17 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/17 Only_C.csv")
+Only_C_18 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/18 Only_C.csv")
+Only_C_19 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/19 Only_C.csv")
+Only_C_20 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/20 Only_C.csv")
+
+Only_D_16 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/16 Only_D.csv")
+Only_D_17 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/17 Only_D.csv")
+Only_D_18 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/18 Only_D.csv")
+Only_D_19<- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/19 Only_D.csv")
+Only_D_20 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/20 Only_D.csv")
+
+### Open Space Group ###
+
+Only_C_21 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/21 Only_C.csv")
+Only_C_22 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/22 Only_C.csv")
+Only_C_23 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/23 Only_C.csv")
+## 24 don't worked!
+Only_C_25 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/25 Only_C.csv")
+
+Only_D_21 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/21 Only_D.csv")
+Only_D_22 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/22 Only_D.csv")
+Only_D_23 <- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/23 Only_D.csv")
+## 24 don't worked!
+Only_D_25<- read.csv("~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/files/25 Only_D.csv")
+
+
+
+##### DESCRIPTIVE STATISTICS #####
+
+### Heating Group ###
+summary(Only_C_11)
+summary(Only_C_12)
+summary(Only_C_13)
+summary(Only_C_14)
+summary(Only_C_15)
+
+summary(Only_D_11)
+summary(Only_D_12)
+summary(Only_D_13)
+summary(Only_D_14)
+summary(Only_D_15)
+
+### OTC Group ###
+
+summary(Only_C_16)
+summary(Only_C_17)
+summary(Only_C_18)
+summary(Only_C_19)
+summary(Only_C_20)
+
+summary(Only_D_16)
+summary(Only_D_17)
+summary(Only_D_18)
+summary(Only_D_19)
+summary(Only_D_20)
+
+### OpenSpace Group ###
+
+summary(Only_C_21)
+summary(Only_C_22)
+summary(Only_C_23)
+summary(Only_C_25)
+
+summary(Only_D_21)
+summary(Only_D_22)
+summary(Only_D_23)
+summary(Only_D_25)
+
+plot(Only_C_11$TempPlant1, col = "red")
+par(new=TRUE)
+plot(Only_C_17$TempPlant2, col = "blue")
+
+scatt
+
+par(mfrow = c(3,1))
+hist(onlyc14$TempPlant3,xlim = c(0,40), 
+     main = "Heating Group N°14. Temp C.Plant 3",
+     xlab = "")
+hist(onlyc14$TempPlant5,xlim = c(0,40),
+     main = "Heating Group N°14. Tem C.Plant 5",
+     xlab = "")
+hist(onlyc14$TempPlant6,xlim = c(0,40),
+     main = "Heating Group N°14. Tem C.Plant 6",
+     xlab = "Temp[°C]")
+
+par(mfrow = c(1,3))
+
+boxplot(onlyc14$TempPlant3,
+        main = "Heating Group N°14. Tem C.Plant 6",
+        ylab = "Temp[°C]")
+
+boxplot(onlyc14$TempPlant5,
+        main = "Heating Group N°14. Tem C.Plant 6",
+        ylab = "Temp[°C]")
+
+boxplot(onlyc14$TempPlant6,
+        main = "Heating Group N°14. Tem C.Plant 6",
+        ylab = "Temp[°C]")

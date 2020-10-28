@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586397864909.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1802698987",
+    "id" : "2881373B",
+    "lastKnownWriteTime" : 1586402597,
+    "last_content_update" : 1586402597854,
+    "path" : "~/Desktop/ALL_DATA_PROCESSED/R/Arctowski/Script.R",
+    "project_path" : "Script.R",
+    "properties" : {
+        "cursorPosition" : "49,0",
+        "scrollLine" : "42",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
