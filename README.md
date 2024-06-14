@@ -4,6 +4,9 @@ Data collected from temp sensors. These sensors measured Ambient temp and folial
 Experiments dates: 21/01/2020-15/03/2020
 
 
+## Authors:
+* Mauricio Montanares (Python and Julia scripts)
+* Alonso Sáez (Julia and R scripts)
 
 
 ![GitHub Logo](ExperimentsSpot.jpg )
